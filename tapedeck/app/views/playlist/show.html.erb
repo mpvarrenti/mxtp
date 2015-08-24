@@ -1,8 +1,25 @@
 <h1>Playlist #<%= @playlist.id %></h1>
 
-<% @songs.each do |song| %>
+<% for song in @songs %>
   <p>Title: <%= song.song_title %></p>
   <p>Artist: <%= song.artist_name %></p>
+  <p>Note: <%= song.notes %></p>
+  
+  <%= form_for(song) do %>
+    <%= label_tag "Add/Edit Note:" %>
+    <%= text_field_tag :notes, "#{song.notes}" %>
+    <%= submit_tag("Add") %>
+
+  <% end %>
+  <%= button_to "Delete Song", {:controller => :playlist_song,
+      :action => 'destroy', :id => song.id }, :method => :delete %>
+  
   <hr>
 <% end %>
+
+<%= button_to "Edit Playlist", edit_playlist_path(@playlist), :method => :get %>
+<%= button_to "Home", root_path, :method => :get %>
+
+<!-- 
+<iframe src="https://embed.spotify.com/?uri=spotify:track:3eMDxLX9JaTTIqyvk7rPfW" frameborder="0" allowtransparency="true"></iframe> -->
 

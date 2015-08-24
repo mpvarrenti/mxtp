@@ -16,3 +16,5 @@
 
 <%= link_to "Done!", playlist_path(@playlist)%>
 
+<%= button_to "Delete Playlist", {:controller => :playlist,
+    :action => 'destroy'}, :method => :delete %>
