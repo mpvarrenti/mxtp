@@ -1,0 +1,10 @@
+<h1>Playlist#create</h1>
+<p>Find me in app/views/playlist/create.html.erb</p>
+
+<%= form_tag("", method: "get") do %>
+	<%= label_tag(:artist, "Artist:") %>
+	<%= text_field_tag(:artist) %>
+	<%= label_tag(:song_title, "Song:") %>
+	<%= text_field_tag(:song_title) %>
+	<%= submit_tag("Add") %>
+<% end %>
