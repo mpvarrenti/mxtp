@@ -14,5 +14,5 @@
 	<p><%= "#{song.song_title} by #{song.artist_name}" %></p>
 <% end %>
 
-<%= link_to "Done!", "/playlist/show/#{@playlist.id}"%>
+<%= link_to "Done!", playlist_path(@playlist)%>
 

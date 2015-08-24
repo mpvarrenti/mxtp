@@ -2,8 +2,13 @@ class PlaylistController < ApplicationController
   def index
   end
 
-  def create
-	@playlist = Playlist.find(2)
+  def new
+	  playlist_new = Playlist.create
+	  redirect_to edit_playlist_path(playlist_new)
+  end
+
+  def edit
+	@playlist = Playlist.find(params[:id])
 
 	if params[:new_song]
 		song_new = PlaylistSong.new
