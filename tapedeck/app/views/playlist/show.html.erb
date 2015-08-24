@@ -1,5 +1,8 @@
 <h1>Playlist #<%= @playlist.id %></h1>
 
-<% @playlist.each do |song| %>
-  
+<% @songs.each do |song| %>
+  <p>Title: <%= song.song_title %></p>
+  <p>Artist: <%= song.artist_name %></p>
+  <hr>
 <% end %>
+

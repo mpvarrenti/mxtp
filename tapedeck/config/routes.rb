@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'playlist/index' => 'playlist#index'
+  get '/' => 'playlist#index'
 
   get 'playlist/create'
 
-  get 'playlist/show/:id' => 'playlist#show'
+  get 'playlist/:id' => 'playlist#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
