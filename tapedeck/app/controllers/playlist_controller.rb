@@ -3,12 +3,18 @@ class PlaylistController < ApplicationController
 
   end
 
-  def new
-	playlist_new = Playlist.find(1)
-	playlist_new_songs = PlaylistSong.where(playlist_id:1)
-  end
-
   def create
+	@playlist = Playlist.find(2)
+
+	if params[:new_song]
+		song_new = PlaylistSong.new
+		song_new.playlist_id = @playlist.id
+		song_new.song_title = params[:new_song][:song_title]
+		song_new.artist_name = params[:new_song][:artist_name]
+		song_new.save
+	end
+
+	@songs = PlaylistSong.where(playlist_id:@playlist.id)
   end
 
   def show

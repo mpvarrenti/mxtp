@@ -1,10 +1,18 @@
-<h1>Playlist#create</h1>
-<p>Find me in app/views/playlist/create.html.erb</p>
+<%= params %>
+<h1>Creating new playlist!</h1>
+<p>Keep adding songs until you're done...</p>
 
 <%= form_tag("", method: "get") do %>
 	<%= label_tag(:artist, "Artist:") %>
-	<%= text_field_tag(:artist) %>
+	<%= text_field(:new_song, :artist_name) %>
 	<%= label_tag(:song_title, "Song:") %>
-	<%= text_field_tag(:song_title) %>
+	<%= text_field(:new_song, :song_title) %>
 	<%= submit_tag("Add") %>
 <% end %>
+
+<% for song in @songs %>
+	<p><%= "#{song.song_title} by #{song.artist_name}" %></p>
+<% end %>
+
+<%= link_to "Done!", "/playlist/show/#{@playlist.id}"%>
+
