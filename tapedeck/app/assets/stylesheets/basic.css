@@ -1,0 +1,22 @@
+body {
+        background-color: linen;
+}
+
+.content-main {
+        border: 5em solid MediumSpringGreen;
+        width: 75vw;
+        margin: 20em auto;
+}
+
+.song-listing {
+        border: thin dotted red;
+}
+
+.songs-list {
+        border: thin solid orange;
+} 
+
+.admin-buttons {
+        border: thick dashed purple;
+}
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  playlist_id: 
+  background-color: MyString
+  color: MyString
+  font-family: MyString
+  font-size: MyString
+
+two:
+  playlist_id: 
+  background-color: MyString
+  color: MyString
+  font-family: MyString
+  font-size: MyString

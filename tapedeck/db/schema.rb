@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824235000) do
+ActiveRecord::Schema.define(version: 20150825125734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20150824235000) do
 
   add_index "playlist_songs", ["playlist_id"], name: "index_playlist_songs_on_playlist_id", using: :btree
 
+  create_table "playlist_styles", force: :cascade do |t|
+    t.integer  "playlist_id"
+    t.string   "background_color"
+    t.string   "color"
+    t.string   "font_family"
+    t.string   "font_size"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "playlist_styles", ["playlist_id"], name: "index_playlist_styles_on_playlist_id", using: :btree
+
   create_table "playlists", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,4 +47,5 @@ ActiveRecord::Schema.define(version: 20150824235000) do
   end
 
   add_foreign_key "playlist_songs", "playlists"
+  add_foreign_key "playlist_styles", "playlists"
 end
