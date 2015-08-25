@@ -3,22 +3,6 @@ require 'rspotify'
 spot_track = RSpotify::Track
 spot_artist = RSpotify::Artist
 
-def list_track name
-	spot_track = RSpotify::Track
-
-	search_results = spot_track.search name
-	results = {}
-
-	search_results.each do |track|
-		results[track.id] = {}
-		results[track.id][:album_name] = track.album.name
-		results[track.id][:year] = track.album.release_date
-		results[track.id][:popularity] = track.popularity
-	end
-
-	results
-end
-
 class Tracks
 	@spotify = RSpotify::Track
 	def self.search params

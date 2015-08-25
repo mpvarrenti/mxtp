@@ -1,5 +1,20 @@
 <%= params %>
-<h1>Creating new playlist!</h1>
+<%= @yep %>
+<h1><%= @title %></h1>
+
+<% if @playlist.title == nil %>
+	<%= form_tag("", method: "get") do %>
+		<%= text_field(:playlist, :title) %>
+		<%= submit_tag("Set Title") %>
+	<% end %>
+<% end %>
+
+<%= form_tag("", method: "get") do %> 
+        <%= color_field(:style, :bgcolor, options = {"value" => params[:style][:bgcolor]}) %> 
+  <%= submit_tag("Update") %>
+<% end %>
+  
+
 <p>Keep adding songs until you're done...</p>
 
 <%= form_tag("", method: "get") do %>
