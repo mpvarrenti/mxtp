@@ -1,48 +1,57 @@
-<div class="content-main">
-        <%= params %>
-        <h1 class="playlist_title"><%= @title %></h1>
-
+<div class="mxtp-main">
+        <%= params if @debug = true %>
+        <h1 class="playlist-title"><%= @title %></h1>
 
         <% if @playlist.title == nil %>
-                <div class="playlist_title_form">
-                        <%= form_tag("", method: "get") do %>
-                                <%= text_field(:playlist, :title) %>
-                                <%= submit_tag("Set Title") %>
-                        <% end %>
+                <div class="mxtp-section">
+                        <div class="playlist_title-form">
+                                <%= form_tag("", method: "get") do %>
+                                        <%= text_field(:playlist, :title) %>
+                                        <%= submit_tag("Set Title") %>
+                                <% end %>
+                        </div>
                 </div>
         <% end %>
 
-        <div class="playlist_style_form">
-                <%= form_tag("", method: "get") do %> 
-                        <%= label_tag(:bgcolor, "Background Colour")%>
-                        <%= color_field(:style, :bgcolor) %> 
-                        <%= label_tag(:color, "Font Colour")%>
-                        <%= color_field(:style, :color)%> 
-                        <%= submit_tag("Update") %>
-                <% end %>
+        <div section="mxtp-section">
+                <div class="playlist_style-form">
+                        <%= form_tag("", method: "get") do %> 
+                                <%= label_tag(:bgcolor, "Background Colour")%>
+                                <%= color_field(:style, :bgcolor) %> 
+                                <%= label_tag(:color, "Font Colour")%>
+                                <%= color_field(:style, :color)%> 
+                                <%= submit_tag("Update") %>
+                        <% end %>
+                </div>
         </div>
 
 
         <p>Keep adding songs until you're done...</p>
 
-        <div class="song_new_form">
-                <%= form_tag("", method: "get") do %>
-                        <%= label_tag(:artist, "Artist:") %>
-                        <%= text_field(:new_song, :artist_name) %>
-                        <%= label_tag(:song_title, "Song:") %>
-                        <%= text_field(:new_song, :song_title) %>
-                        <%= submit_tag("Add") %>
-                <% end %>
+        <div class="mxtp-section">
+                <div class="song_new-form">
+                        <%= form_tag("", method: "get") do %>
+                                <%= label_tag(:artist, "Artist:") %>
+                                <%= text_field(:new_song, :artist_name) %>
+                                <%= label_tag(:song_title, "Song:") %>
+                                <%= text_field(:new_song, :song_title) %>
+                                <%= submit_tag("Add") %>
+                        <% end %>
+                </div>
         </div>
 
-        <div class="songs-list">
-                <% for song in @songs %>
-                        <p><%= "#{song.song_title} by #{song.artist_name}" %></p>
-                <% end %>
+        <div class="mxtp-section">
+                <div class="song-list">
+                        <% for song in @songs %>
+                                <p><%= "#{song.song_title} by #{song.artist_name}" %></p>
+                        <% end %>
+                </div>
         </div>
 
-        <div class="admin-buttons">
-                <%= link_to "Done!", playlist_path(@playlist)%>
-                <%= button_to "Delete Playlist", {:controller => :playlist, :action => 'destroy'}, :method => :delete %>
+        <div class="mxtp-section">
+                <div class="mxtp-buttons">
+                        <%= button_to "Done!", playlist_path(@playlist), method: :get%>
+                        <%= button_to "Delete Playlist", playlist_path(@playlist), method: :delete %>
+                </div>
         </div>
 </div>

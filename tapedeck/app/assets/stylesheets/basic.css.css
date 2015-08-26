@@ -1,0 +1,75 @@
+/*
+Error: Undefined mixin 'background'.
+        on line 9 of basic.css.scss, in `background'
+        from line 9 of basic.css.scss
+
+4: 
+5: .content-main {
+6:         border: 5em solid MediumSpringGreen;
+7:         width: 75vw;
+8:         margin: 20em auto;
+9:         @include background(linear-gradient(red, green) left repeat);
+10: }
+11: 
+12: .song-listing {
+13:         border: thin dotted red;
+14: }
+
+Backtrace:
+basic.css.scss:9:in `background'
+basic.css.scss:9
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:98:in `block in with_mixin'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:98:in `with_mixin'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:347:in `visit_mixin'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:431:in `map'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:293:in `watch'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/plugin.rb:108:in `method_missing'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/exec/sass_scss.rb:384:in `watch_or_update'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/exec/base.rb:52:in `parse'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/lib/sass/exec/base.rb:19:in `parse!'
+/usr/lib/ruby/gems/2.2.0/gems/sass-3.4.17/bin/sass:13:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'background'.\A         on line 9 of basic.css.scss, in `background'\A         from line 9 of basic.css.scss\A \A 4: \A 5: .content-main {\A 6:         border: 5em solid MediumSpringGreen;\A 7:         width: 75vw;\A 8:         margin: 20em auto;\A 9:         @include background(linear-gradient(red, green) left repeat);\A 10: }\A 11: \A 12: .song-listing {\A 13:         border: thin dotted red;\A 14: }"; }

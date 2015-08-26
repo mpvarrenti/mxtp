@@ -41,11 +41,27 @@ class PlaylistController < ApplicationController
 
   def show
     @playlist = Playlist.find params[:id]
-    @songs = PlaylistSong.where(playlist_id: @playlist.id)
+    @songs = PlaylistSong.where(playlist_id: @playlist.id).order('created_at DESC')
+
+    @uid = []
+
+    for song in @songs
+      play = Spotify.lucky "#{song.song_title}"
+      song.song_uid = play[:uid] 
+      song.artist_name = play[:artist]
+      song.save
+
+      @uid.push(song.song_uid)
+    end
+
+      @list_of_songs = @uid.join(",")
+
     if params[:notes] != nil
         @songs.notes = params[:notes]
     end
+
   end
+  
 
   def destroy
     @playlist = Playlist.find params[:id]
