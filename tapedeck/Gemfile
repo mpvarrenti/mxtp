@@ -44,5 +44,6 @@ group :development, :test do
   gem 'rspotify'
   gem 'pry'
   gem 'bourbon'
+  gem 'bootstrap-sass', '~> 3.3.5'
+  gem 'awesome_print'
 end
-
