@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- <div class="mxtp-container"> -->
+  <header class="main-header">
+    <h1 class="landing-title"><a href="/">MXTP</a></h1>
+    <div class="diagonal-stripes"></div>
+  </header>
+    <%= yield %>
 
-<%= yield %>
+  </div>
 
 </body>
 </html>

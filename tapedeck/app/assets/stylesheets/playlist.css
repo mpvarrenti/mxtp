@@ -1,3 +1,147 @@
+@media screen and (min-device-width: 200px) {
+  body {
+    margin: 0px; }
 
+  .main-background {
+    background: url("hero_image.jpg");
+    background-size: cover;
+    height: 45em; }
+
+  .main-header .landing-title a {
+    padding-left: 2em;
+    text-decoration: none;
+    color: #686868; }
+  .main-header .diagonal-stripes {
+    height: 10px;
+    background: linear-gradient(45deg, white 25%, #ffa500 25%, #ffa500 50%, white 50%, white 75%, #ffa500 75%);
+    background-size: 10px 15px;
+    border-bottom: solid white 0.5em; }
+
+  .engage-section {
+    border-radius: 10px;
+    padding-top: 10em;
+    padding-bottom: 5em; }
+    .engage-section .engage-title {
+      text-align: center;
+      color: white;
+      font-size: 2.5em; }
+    .engage-section .button_to {
+      display: inline-block; }
+      .engage-section .button_to input {
+        border: solid white 3px;
+        width: 10em;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.3); }
+      .engage-section .button_to input:hover, .engage-section .button_to input:active {
+        background-color: transparent;
+        border: solid white 5px;
+        pointer: cursor; }
+
+  .mxtp-main {
+    border: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 2em; }
+    .mxtp-main .mxtp-labels {
+      padding-left: 10px;
+      border-bottom: solid 3px black; }
+    .mxtp-main .playlist-title {
+      text-align: center;
+      position: relative;
+      font-size: 1.2em;
+      z-index: -1; }
+    .mxtp-main .playlist-set-title {
+      margin-top: -2em; }
+      .mxtp-main .playlist-set-title input {
+        width: 100%;
+        z-index: -2;
+        font-size: 1.2em;
+        border: 0;
+        background-color: transparent; }
+      .mxtp-main .playlist-set-title input:hover {
+        border-bottom: solid 3px black; }
+      .mxtp-main .playlist-set-title input:focus {
+        border-bottom: solid 3px black;
+        outline: none;
+        background-color: white;
+        text-align: center; }
+    .mxtp-main .playlist_style-form {
+      text-align: center; }
+    .mxtp-main .mxtp-section {
+      text-align: center; }
+
+  .mxtp-form-btn input {
+    border: solid 2px #ffa500;
+    color: #ffa500;
+    background-color: white;
+    width: 10em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1em; }
+  .mxtp-form-btn input:hover, .mxtp-form-btn input:active {
+    background-color: #E0E0E0;
+    color: #ffa500;
+    font-weight: bolder;
+    border: solid 3px #ffa500;
+    cursor: pointer; }
+
+  .mxtp-buttons {
+    text-align: center; }
+    .mxtp-buttons .button_to {
+      display: inline-block;
+      margin-top: 1em;
+      margin-bottom: 2em; }
+      .mxtp-buttons .button_to input {
+        border: solid 2px #3399FF;
+        font-size: 1em;
+        background-color: white;
+        color: #3399FF; }
+      .mxtp-buttons .button_to input:hover {
+        background-color: #E0E0E0;
+        cursor: pointer; }
+
+  .cassette-tape {
+    text-align: center;
+    position: relative;
+    z-index: -1; }
+    .cassette-tape img {
+      width: 450px; }
+
+  .mxtp-player {
+    margin-top: -13em;
+    text-align: center;
+    margin-bottom: 5em; }
+    .mxtp-player iframe {
+      z-index: -2; }
+
+  .song-listing {
+    padding-top: 0.2em; }
+
+  .song-details {
+    font-weight: bolder;
+    color: #3399FF;
+    border-bottom: solid 3px #3399FF;
+    margin-bottom: 1em; } }
+@media all and (min-width: 600px) {
+  .song-details {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 1em; }
+
+  .mxtp-main {
+    margin: 0 auto;
+    max-width: 80%; }
+
+  .engage-section .engage-title {
+    font-size: 4em; }
+
+  .mxtp-main .playlist-title {
+    font-size: 2em; }
+  .mxtp-main .playlist-set-title {
+    margin-top: -4em; }
+    .mxtp-main .playlist-set-title input {
+      font-size: 2em; } }
 
 /*# sourceMappingURL=playlist.css.map */

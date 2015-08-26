@@ -1,0 +1,25 @@
+/*
+Errno::ENOENT: No such file or directory @ rb_sysopen - style.scss
+
+Backtrace:
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:482:in `read'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:482:in `update_stylesheet'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/plugin/compiler.rb:293:in `watch'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/plugin.rb:108:in `method_missing'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/exec/sass_scss.rb:384:in `watch_or_update'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/exec/base.rb:52:in `parse'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/lib/sass/exec/base.rb:19:in `parse!'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/gems/sass-3.4.17/bin/sass:13:in `<top (required)>'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/bin/sass:23:in `load'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/bin/sass:23:in `<main>'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `eval'
+/Users/jennytran/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - style.scss"; }
