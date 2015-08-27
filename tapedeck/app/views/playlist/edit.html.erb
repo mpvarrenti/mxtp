@@ -6,7 +6,7 @@
                 <div class="mxtp-section">
                         <div class="playlist_title-form">
                                 <%= form_tag("", method: "get") do %>
-                                        <%= text_field(:playlist, :title) %>
+					<%= text_field(:playlist, :title, options = {placeholder: "set playlist title here..."}) %>
                                         <%= submit_tag("Set Title") %>
                                 <% end %>
                         </div>
@@ -31,9 +31,7 @@
         <div class="mxtp-section">
                 <div class="song_new-form">
                         <%= form_tag("", method: "get") do %>
-                                <%= label_tag(:artist, "Artist:") %>
-                                <%= text_field(:new_song, :artist_name) %>
-                                <%= label_tag(:song_title, "Song:") %>
+                                <%= label_tag(:song_title, "Song Title:") %>
                                 <%= text_field(:new_song, :song_title) %>
                                 <%= submit_tag("Add") %>
                         <% end %>
@@ -43,7 +41,13 @@
         <div class="mxtp-section">
                 <div class="song-list">
                         <% for song in @songs %>
-                                <p><%= "#{song.song_title} by #{song.artist_name}" %></p>
+				<hr>
+				<p>
+					<%= "#{song.song_title} by #{song.artist_name}" %>
+					<%= form_for :fix_artist, url:edit_playlist_song_path(song), method: :get do |fix_artist_form| %>
+						<%= fix_artist_form.submit "Fix Artist" %>	
+					<% end %>
+				</p>
                         <% end %>
                 </div>
         </div>

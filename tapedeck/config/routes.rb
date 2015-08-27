@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	resources :playlist
-  resources :playlist_song, only: [:update, :destroy]
+	resources :playlist_song
   #get '/' => 'playlist#index'
 
   #get 'playlist/create'

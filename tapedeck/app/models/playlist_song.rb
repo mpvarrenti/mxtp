@@ -16,8 +16,16 @@ class PlaylistSong < ActiveRecord::Base
 		get.preview_url
 	end
 
-	def duration
+	def duration_secs
 		get.duration_ms/1000
+	end
+
+	def duration_mins_dec
+		Helper.to_mins_dec duration_secs
+	end
+
+	def duration_mins_s
+		Helper.to_mins_s duration_secs
 	end
 
 	def spotify
