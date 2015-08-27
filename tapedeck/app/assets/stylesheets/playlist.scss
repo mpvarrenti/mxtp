@@ -23,6 +23,8 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   .main-header {
+    // display: inline-block;
+
     
     .landing-title a {
       padding-left: 2em;
@@ -30,6 +32,25 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       color: $dark-grey;
     }
 
+    .nav-links {
+      float: right;
+      margin-top: -3.1em;
+      text-align: right;
+      margin-right: 2em;
+
+      a {
+        text-decoration: none;
+        color: $dark-grey;
+        margin-left: 2em;
+      }
+
+      a:hover {
+        color: $dark-blue;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+    
+    }
 
     .diagonal-stripes {
       height: 10px;
@@ -72,8 +93,8 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       input:hover, input:active {
           background-color: rgba(0, 0, 0, 0);
           border: solid white 5px;
-          pointer: cursor;
           transition: 0.3s;
+          pointer: cursor;
       }
     }
   }
@@ -121,6 +142,7 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       }
 
       input:hover {
+        pointer: cursor;
         border-bottom: $solid-outline;
       }
 
@@ -190,6 +212,7 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       outline: none;
       border-bottom: solid 3px $dark-blue;
       transition: 0.5s;
+      pointer: cursor;
     }
   }
 

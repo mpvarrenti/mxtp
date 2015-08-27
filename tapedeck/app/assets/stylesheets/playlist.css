@@ -12,6 +12,19 @@
     padding-left: 2em;
     text-decoration: none;
     color: #686868; }
+  .main-header .nav-links {
+    float: right;
+    margin-top: -3.1em;
+    text-align: right;
+    margin-right: 2em; }
+    .main-header .nav-links a {
+      text-decoration: none;
+      color: #686868;
+      margin-left: 2em; }
+    .main-header .nav-links a:hover {
+      color: #3399FF;
+      font-weight: bold;
+      transition: 0.5s; }
   .main-header .diagonal-stripes {
     height: 10px;
     background: linear-gradient(45deg, white 25%, #ffa500 25%, #ffa500 50%, white 50%, white 75%, #ffa500 75%);
@@ -41,8 +54,8 @@
       .engage-section .button_to input:hover, .engage-section .button_to input:active {
         background-color: transparent;
         border: solid white 5px;
-        pointer: cursor;
-        transition: 0.3s; }
+        transition: 0.3s;
+        pointer: cursor; }
 
   .mxtp-main {
     border: 1em;
@@ -66,6 +79,7 @@
         border: 0;
         background-color: transparent; }
       .mxtp-main .playlist-set-title input:hover {
+        pointer: cursor;
         border-bottom: solid 3px black; }
       .mxtp-main .playlist-set-title input:focus {
         border-bottom: solid 3px black;
@@ -110,7 +124,8 @@
   .mxtp-form-input input:focus, .mxtp-form-input input:hover {
     outline: none;
     border-bottom: solid 3px #3399FF;
-    transition: 0.5s; }
+    transition: 0.5s;
+    pointer: cursor; }
 
   .mxtp-buttons {
     text-align: center; }
