@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-	resources :playlist
+
+  get '/about' => 'pages#about'
+  resources :playlist
   resources :playlist_song, only: [:update, :destroy]
   #get '/' => 'playlist#index'
 

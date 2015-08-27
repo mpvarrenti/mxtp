@@ -1,27 +1,35 @@
 <div class="mxtp-main">
-        <h1 class="playlist-title">Playlist #<%= @playlist.id %></h1>
+        <h1 class="playlist-title"><%= @playlist.title.upcase %></h1>
 
-        <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @list_of_songs %>" frameborder="0" allowtransparency="true"></iframe>
+        <div class="cassette-tape"><%= image_tag("cassette.svg") %></div>
+
+        <div class="mxtp-player">
+            <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @list_of_songs %>" frameborder="0" allowtransparency="true"></iframe>
+        </div>
 
         <div class="mxtp-section">
                 <% for song in @songs %>
                         <div class="song-listing">
-                                <div class="song-title"><p>Title: <%= song.song_title %></p></div>
-                                <div class="song-artist"><p>Artist: <%= song.artist_name %></p></div>
-                                <div class="song-notes"><p>Note: <%= song.notes %></p></div>
-                          
+
+                                <div class="song-details"><p><%= song.song_title %> by <%= song.artist_name %></p></div>
+                                <!-- <div class="song-artist"><p>Artist: <%= song.artist_name %></p></div> -->
                                 <div class="song-note-form">
+                                <% if song.notes != nil %>
+                                <div class="song-notes"><p><%= song.notes %></p></div>
+                                <% else %>
                                   <%= form_for(song) do %>
-                                    <%= label_tag "Add/Edit Note:" %>
-                                    <%= text_field_tag :notes, "#{song.notes}" %>
-                                    <%= submit_tag("Add") %>
+                                    <%#= label_tag "Add Note:" %>
+                                    <div class="mxtp-form-input"><%= text_area_tag :notes, "#{song.notes}" %></div>
+                                    <div class="mxtp-form-btn"><%= submit_tag("Add Note") %></div>
                                   <% end %>
+                                <% end %>
+                            <!-- <div class="mxtp-buttons"> -->
+                                    <div class="mxtp-form-btn"><%= button_to "Delete Song", playlist_song_path(song), method: :delete %>
+                                    </div>
+                            <!-- </div> -->
                                 </div>
                         </div>
 
-                        <div class="mxtp-buttons">
-                                <%= button_to "Delete Song", playlist_song_path(song), method: :delete %>
-                        </div>
                 <% end %>
         </div>
 

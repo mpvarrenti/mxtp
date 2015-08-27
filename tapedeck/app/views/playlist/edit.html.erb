@@ -1,18 +1,21 @@
 <div class="mxtp-main">
-        <%= params if @debug = true %>
-        <h1 class="playlist-title"><%= @title %></h1>
+        <%#= params if @debug = true %>
+        <h1 class="playlist-title"><%= @title.upcase %></h1>
 
         <% if @playlist.title == nil %>
                 <div class="mxtp-section">
                         <div class="playlist_title-form">
                                 <%= form_tag("", method: "get") do %>
+                                      <div class="playlist-set-title">
                                         <%= text_field(:playlist, :title) %>
-                                        <%= submit_tag("Set Title") %>
+                                      </div>
+                                        <div class="mxtp-form-btn"><%= submit_tag("Set Title") %></div>
                                 <% end %>
                         </div>
                 </div>
         <% end %>
 
+        <h3 class="mxtp-labels">Profile Style</h3>
         <div section="mxtp-section">
                 <div class="playlist_style-form">
                         <%= form_tag("", method: "get") do %> 
@@ -20,22 +23,22 @@
                                 <%= color_field(:style, :bgcolor) %> 
                                 <%= label_tag(:color, "Font Colour")%>
                                 <%= color_field(:style, :color)%> 
-                                <%= submit_tag("Update") %>
+                                <div class="mxtp-form-btn"><%= submit_tag("Update") %></div>
                         <% end %>
                 </div>
         </div>
 
 
-        <p>Keep adding songs until you're done...</p>
+        <h3 class="mxtp-labels">Keep adding songs until you're done...</h3>
 
         <div class="mxtp-section">
                 <div class="song_new-form">
                         <%= form_tag("", method: "get") do %>
-                                <%= label_tag(:artist, "Artist:") %>
-                                <%= text_field(:new_song, :artist_name) %>
                                 <%= label_tag(:song_title, "Song:") %>
-                                <%= text_field(:new_song, :song_title) %>
-                                <%= submit_tag("Add") %>
+                                <div class="mxtp-form-input"><%= text_field(:new_song, :song_title) %></div>
+                                <%= label_tag(:artist, "Artist:") %>
+                                <div class="mxtp-form-input"><%= text_field(:new_song, :artist_name) %></div>
+                                <div class="mxtp-form-btn"><%= submit_tag("Add") %></div>
                         <% end %>
                 </div>
         </div>

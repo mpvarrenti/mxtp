@@ -26,7 +26,7 @@ class PlaylistController < ApplicationController
             @playlist.save
           end
 
-          @playlist.title == nil ? @title = "Untitled" : @title = @playlist.title
+          @playlist.title == nil ? @title = "Click here to change title" : @title = @playlist.title
 
           if params[:new_song]
             song_new = PlaylistSong.new
