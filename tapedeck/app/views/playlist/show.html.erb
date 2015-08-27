@@ -1,7 +1,11 @@
 <div class="mxtp-main">
         <h1 class="playlist-title">Playlist #<%= @playlist.id %></h1>
 
-        <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @list_of_songs %>" frameborder="0" allowtransparency="true"></iframe>
+	<div class="cassette-tape"><%= @playlist.title.upcase %></h1>
+
+	<div class="mxtp-player">
+		<iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @list_of_songs %>" frameborder="0" allowtransparency="true"></iframe>
+	</div>
 
         <div class="mxtp-section">
                 <% for song in @songs %>
@@ -25,11 +29,9 @@
                 <% end %>
         </div>
 
-        <div class="mxtp-section">
-                <div class="mxtp-buttons">
-                        <%= button_to "Edit Playlist", edit_playlist_path(@playlist), method: :get %>
-                        <%= button_to "Home", root_path, method: :get %>
-                </div>
+        <div class="mxtp-section mxtp-buttons">
+		<%= button_to "Edit Playlist", edit_playlist_path(@playlist), method: :get %>
+		<%= button_to "Home", root_path, method: :get %>
         </div>
 
         <!-- 

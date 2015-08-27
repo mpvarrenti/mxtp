@@ -4,59 +4,49 @@
 
         <% if @playlist.title == nil %>
                 <div class="mxtp-section">
-                        <div class="playlist_title-form">
-                                <%= form_tag("", method: "get") do %>
-					<%= text_field(:playlist, :title, options = {placeholder: "set playlist title here..."}) %>
-                                        <%= submit_tag("Set Title") %>
-                                <% end %>
-                        </div>
+			<%= form_tag("", method: "get", class: "playlist_title-form") do %>
+				<%= text_field(:playlist, :title, class: "playlist-set-title" ) %>
+				<%= submit_tag("Set Title", class: "mxtp-form-btn") %>
+			<% end %>
                 </div>
         <% end %>
 
-        <div section="mxtp-section">
-                <div class="playlist_style-form">
-                        <%= form_tag("", method: "get") do %> 
-                                <%= label_tag(:bgcolor, "Background Colour")%>
-                                <%= color_field(:style, :bgcolor) %> 
-                                <%= label_tag(:color, "Font Colour")%>
-                                <%= color_field(:style, :color)%> 
-                                <%= submit_tag("Update") %>
-                        <% end %>
-                </div>
+	<h3 class="mxtp-labels">Profile Style</h3>
+        <div class="mxtp-section">
+		<%= form_tag("", method: "get", style: "playlist_style-form") do %> 
+			<%= label_tag(:bgcolor, "Background Colour") %>
+			<%= color_field(:style, :bgcolor) %> 
+			<%= label_tag(:color, "Font Colour") %>
+			<%= color_field(:style, :color) %> 
+			<%= submit_tag("Update", class: "mxtp-form-btn") %>
+		<% end %>
         </div>
 
-
-        <p>Keep adding songs until you're done...</p>
+        <h3 class="mxtp-section">Keep adding songs until you're done...</h3>
 
         <div class="mxtp-section">
-                <div class="song_new-form">
-                        <%= form_tag("", method: "get") do %>
-                                <%= label_tag(:song_title, "Song Title:") %>
-                                <%= text_field(:new_song, :song_title) %>
-                                <%= submit_tag("Add") %>
-                        <% end %>
-                </div>
+		<%= form_tag("", method: "get", style: "song_new-form") do %>
+			<%= label_tag(:song_title, "Song Title:") %>
+			<%= text_field(:new_song, :song_title, class: "mxtp-form-input") %>
+			<%= submit_tag("Add", class: "mxtp-form-btn") %>
+		<% end %>
         </div>
 
-        <div class="mxtp-section">
-                <div class="song-list">
-                        <% for song in @songs %>
-				<hr>
-				<p>
-					<%= "#{song.song_title} by #{song.artist_name}" %>
-					<%= form_for :fix_artist, url:edit_playlist_song_path(song), method: :get do |fix_artist_form| %>
-						<%= hidden_field_tag(:song_id, song.id) %>
-						<%= fix_artist_form.submit "Fix Artist" %>	
-					<% end %>
-				</p>
-                        <% end %>
-                </div>
+        <div class="mxtp-section song-list">
+		<% for song in @songs %>
+			<hr>
+			<p>
+				<%= "#{song.song_title} by #{song.artist_name}" %>
+				<%= form_for :fix_artist, url:edit_playlist_song_path(song), method: :get do |fix_artist_form| %>
+					<%= hidden_field_tag(:song_id, song.id) %>
+					<%= fix_artist_form.submit "Fix Artist" %>	
+				<% end %>
+			</p>
+		<% end %>
         </div>
 
-        <div class="mxtp-section">
-                <div class="mxtp-buttons">
-                        <%= button_to "Done!", playlist_path(@playlist), method: :get%>
-                        <%= button_to "Delete Playlist", playlist_path(@playlist), method: :delete %>
-                </div>
+        <div class="mxtp-section mxtp-buttons">
+		<%= button_to "Done!", playlist_path(@playlist), method: :get %>
+		<%= button_to "Delete Playlist", playlist_path(@playlist), method: :delete %>
         </div>
 </div>
