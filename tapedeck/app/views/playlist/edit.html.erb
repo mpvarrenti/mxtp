@@ -35,9 +35,9 @@
                 <div class="song_new-form">
                         <%= form_tag("", method: "get") do %>
                                 <%= label_tag(:song_title, "Song:") %>
-                                <%= text_field(:new_song, :song_title) %>
+                                <div class="mxtp-form-input"><%= text_field(:new_song, :song_title) %></div>
                                 <%= label_tag(:artist, "Artist:") %>
-                                <%= text_field(:new_song, :artist_name) %>
+                                <div class="mxtp-form-input"><%= text_field(:new_song, :artist_name) %></div>
                                 <div class="mxtp-form-btn"><%= submit_tag("Add") %></div>
                         <% end %>
                 </div>

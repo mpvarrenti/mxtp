@@ -4,7 +4,7 @@
         <div class="cassette-tape"><%= image_tag("cassette.svg") %></div>
 
         <div class="mxtp-player">
-            <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%#= @list_of_songs %>" frameborder="0" allowtransparency="true"></iframe>
+            <iframe src="https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:<%= @list_of_songs %>" frameborder="0" allowtransparency="true"></iframe>
         </div>
 
         <div class="mxtp-section">
@@ -13,14 +13,14 @@
 
                                 <div class="song-details"><p><%= song.song_title %> by <%= song.artist_name %></p></div>
                                 <!-- <div class="song-artist"><p>Artist: <%= song.artist_name %></p></div> -->
-                                <% if song.notes != nil %>
-                                <div class="song-notes"><p>Note: <%= song.notes %></p></div>
-                                <% else %>
                                 <div class="song-note-form">
+                                <% if song.notes != nil %>
+                                <div class="song-notes"><p><%= song.notes %></p></div>
+                                <% else %>
                                   <%= form_for(song) do %>
-                                    <%= label_tag "Add Note:" %>
-                                    <%= text_field_tag :notes, "#{song.notes}" %>
-                                    <%= submit_tag("Add") %>
+                                    <%#= label_tag "Add Note:" %>
+                                    <div class="mxtp-form-input"><%= text_area_tag :notes, "#{song.notes}" %></div>
+                                    <div class="mxtp-form-btn"><%= submit_tag("Add Note") %></div>
                                   <% end %>
                                 <% end %>
                             <!-- <div class="mxtp-buttons"> -->
