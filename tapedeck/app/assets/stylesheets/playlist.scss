@@ -1,3 +1,323 @@
-// Place all the styles related to the playlist controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// COLOR SCHEME:
+$dark-grey: #686868;
+$light-grey: #E0E0E0;
+$orange: #ffa500;
+$dark-blue: #3399FF;
+
+$solid-outline: solid 3px black;
+$main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@media screen and (min-device-width: 200px) {
+
+// INDEX =====================================================
+
+  body {
+    margin: 0px;
+  }
+
+  .main-background {
+    background: url("hero_image.jpg");
+    opacity: 0.8;
+    background-size: cover;
+    height: 45em;
+  }
+
+  .main-header {
+    // display: inline-block;
+
+    
+    .landing-title a {
+      padding-left: 2em;
+      text-decoration: none;
+      color: $dark-grey;
+    }
+
+    .nav-links {
+      float: right;
+      margin-top: -3.1em;
+      text-align: right;
+      margin-right: 2em;
+
+      a {
+        text-decoration: none;
+        color: $dark-grey;
+        margin-left: 2em;
+      }
+
+      a:hover {
+        color: $dark-blue;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+    
+    }
+
+    .diagonal-stripes {
+      height: 10px;
+      background: linear-gradient(45deg, white 25%,
+      $orange 25%, $orange 50%, 
+      white 50%, white 75%, 
+      $orange 75%);
+      background-size: 10px 15px;
+      border-bottom: solid white 0.5em;
+    }
+
+  }
+
+  .engage-section {
+    border-radius: 10px; 
+    padding-top: 10em;
+    padding-bottom: 5em;
+    
+    .engage-title {
+      text-align: center;
+      color: white;
+      font-size: 2.5em;
+    }
+        
+    .button_to {
+      display: inline-block;
+
+      input {
+        border: solid white 3px;
+        width: 10em;
+        font-family: $main-font;
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+      }
+
+      input:hover, input:active {
+          background-color: rgba(0, 0, 0, 0);
+          border: solid white 5px;
+          transition: 0.3s;
+          pointer: cursor;
+      }
+    }
+  }
+
+
+  // EDIT PAGE ================================
+
+
+  .mxtp-main {
+    // background-color: $light-grey;
+    border: 1em;
+    // margin: 1em;
+    // padding-left: 5em;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    // margin: 0 auto;
+    // max-width: 80%;
+
+    .mxtp-labels {
+      padding-left: 10px;
+      border-bottom: $solid-outline;
+      // background-color: black;
+      // color: white;
+    }
+    
+    .playlist-title {
+      color: $dark-grey;
+      text-align: center;
+      position: relative;
+      font-size: 1.2em;
+      z-index: -1;
+     
+    }
+
+    .playlist-set-title {
+      margin-top: -2em;
+      
+      input {
+        width: 100%;
+        z-index: -2;
+        font-size: 1.2em;
+        border: 0;
+        // border-bottom: $solid-outline;
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      input:hover {
+        pointer: cursor;
+        border-bottom: $solid-outline;
+      }
+
+      input:focus {
+        border-bottom: $solid-outline;
+        outline: none;
+        background-color: white;
+        text-align: center;
+      }
+
+    }
+    
+    .playlist_style-form {
+      text-align: center;
+    }
+
+    .mxtp-section {
+      text-align: center;
+    }
+  }
+
+  // FORM - MIDDLE BUTTONS
+  .mxtp-form-btn {
+    
+    input {
+      border: solid 2px $orange;
+      color: $orange;
+      background-color: white;
+      width: 10em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-size: 1em;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+      border-radius: 5px;
+    }
+    
+    input:hover, input:active {
+      background-color: $orange;
+      color: white;
+      font-weight: bolder;
+      transition: 0.2s;
+      // border: solid 3px $orange;
+      cursor: pointer;
+      // border: 5px;
+    }
+
+  }
+
+  .mxtp-form-input {
+    textarea {
+      height: 5em;
+      width: 30em;
+      font-size: 1em;
+    }
+    input {
+      width: 30em;
+      height: 2em;
+      border: none;
+      border-bottom: solid 2px $dark-grey;
+      margin-bottom: 1em;
+      font-size: 1em;
+      color: $dark-blue;
+    }
+
+    input:focus, input:hover {
+      outline: none;
+      border-bottom: solid 3px $dark-blue;
+      transition: 0.5s;
+      pointer: cursor;
+    }
+  }
+
+
+// FOOTER BUTTONS
+  .mxtp-buttons {
+    text-align: center;
+    // border-top: solid 1px $light-grey;
+
+
+    .button_to {
+      display: inline-block;
+      margin-top: 1em;
+      margin-bottom: 2em;
+
+        input {
+          border: solid 2px $dark-blue;
+          font-size: 1em;
+          background-color: white;
+          color: $dark-blue;
+          padding-top: 0.3em;
+          padding-bottom: 0.3em;
+          border-radius: 5px;
+          width: 10em;
+        }
+
+        input:hover {
+          transition: 0.2s;
+          background-color: $dark-blue;
+          color: white;
+          font-weight: bold;
+          // border: solid 3px $dark-blue;
+          cursor: pointer;
+        }
+    }
+  }
+
+// SHOW ===============================================
+
+  .cassette-tape {
+    text-align: center;
+    position: relative;
+    z-index: -1;
+
+    img {
+      width: 450px;
+    }
+  }
+
+  .mxtp-player {
+    margin-top: -13em;
+    text-align: center;
+    margin-bottom: 5em;
+      
+      iframe {
+        z-index: -2;
+      }
+  }
+
+  .song-listing {
+    padding-top: 0.2em;
+    // background-color: red;
+  }
+    .song-details {
+      font-weight: bolder;
+      color: $dark-blue;
+      border-bottom: solid 3px $dark-blue;
+      margin-bottom: 1em;
+    }
+
+}
+
+// FULL SCREEN ============================
+
+@media all and (min-width: 600px) {
+
+  .song-details {
+    width: 30em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+
+  .mxtp-main {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  .engage-section {
+
+    .engage-title {
+      font-size: 4em;
+    }
+  }
+  .mxtp-main {
+    .playlist-title {
+      font-size: 2em;
+    }
+
+    .playlist-set-title {
+      margin-top: -4em;
+      input {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+

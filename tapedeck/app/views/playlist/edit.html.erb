@@ -1,6 +1,6 @@
 <div class="mxtp-main">
-        <%= params if @debug = true %>
-        <h1 class="playlist-title"><%= @title %></h1>
+        <%#= params if @debug = true %>
+        <h1 class="playlist-title"><%= @title.upcase %></h1>
 
         <% if @playlist.title == nil %>
                 <div class="mxtp-section">
