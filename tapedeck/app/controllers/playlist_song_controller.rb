@@ -6,6 +6,8 @@ class PlaylistSongController < ApplicationController
 
 		# if loop for fix artist
 		if params[:commit] = "Fix Artist"
+			# get song
+			@song = PlaylistSong.find params[:song_id]
 			# advance spotify song index 
 			@song.spotify_index += 1 
 			# get songs from spotify

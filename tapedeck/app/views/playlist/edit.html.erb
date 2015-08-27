@@ -45,6 +45,7 @@
 				<p>
 					<%= "#{song.song_title} by #{song.artist_name}" %>
 					<%= form_for :fix_artist, url:edit_playlist_song_path(song), method: :get do |fix_artist_form| %>
+						<%= hidden_field_tag(:song_id, song.id) %>
 						<%= fix_artist_form.submit "Fix Artist" %>	
 					<% end %>
 				</p>
