@@ -4,12 +4,13 @@
   <title>Tapedeck</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
   <%= csrf_meta_tags %>
 </head>
 <body>
   <!-- <div class="mxtp-container"> -->
   <header class="main-header">
-    <h1 class="landing-title"><a href="/">MXTP</a></h1><span class="nav-links"><a href="/about">ABOUT</a><a href="/contact">CONTACT</a></span>
+    <h1 class="landing-title"><a href="/">MXTP</a></h1><span class="nav-links"><a href="/about">ABOUT</a><%= link_to "GET STARTED", new_playlist_path %></span>
     <div class="diagonal-stripes"></div>
   </header>
     <%= yield %>

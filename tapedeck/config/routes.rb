@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 	resources :playlist
 	resources :playlist_song
 
-	  get '/about' => 'pages#about'
+	  get '/about' => 'page#about'
   #get '/' => 'playlist#index'
 
   #get 'playlist/create'

@@ -1,0 +1,261 @@
+@media screen and (min-device-width: 200px) {
+  body {
+    margin: 0px; }
+
+  .main-background {
+    background: url("hero_image.jpg");
+    opacity: 0.8;
+    background-size: cover;
+    height: 45em; }
+
+  .main-header .landing-title a {
+    padding-left: 1.5em;
+    text-decoration: none;
+    color: #686868; }
+  .main-header .nav-links {
+    float: right;
+    margin-top: -3.1em;
+    text-align: right;
+    margin-right: 3em; }
+    .main-header .nav-links a {
+      text-decoration: none;
+      color: #686868;
+      margin-left: 2em; }
+    .main-header .nav-links a:hover {
+      color: #3399FF;
+      font-weight: bold;
+      transition: 0.5s; }
+  .main-header .diagonal-stripes {
+    height: 10px;
+    background: linear-gradient(45deg, white 25%, #ffa500 25%, #ffa500 50%, white 50%, white 75%, #ffa500 75%);
+    background-size: 10px 15px;
+    border-bottom: solid white 0.5em; }
+
+  .engage-section {
+    border-radius: 10px;
+    padding-top: 10em;
+    padding-bottom: 5em; }
+    .engage-section .engage-title {
+      text-align: center;
+      color: white;
+      font-size: 2.5em; }
+    .engage-section .button_to {
+      display: inline-block; }
+      .engage-section .button_to input {
+        border: solid white 3px;
+        width: 10em;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding-top: 0.3em;
+        padding-bottom: 0.3em; }
+      .engage-section .button_to input:hover, .engage-section .button_to input:active {
+        background-color: transparent;
+        border: solid white 5px;
+        transition: 0.3s;
+        pointer: cursor; }
+
+  .song-list {
+    font-size: 1.2em; }
+    .song-list p {
+      margin-bottom: 0.1em; }
+
+  .mxtp-main {
+    border: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 2em; }
+    .mxtp-main .mxtp-labels {
+      padding-left: 10px;
+      border-bottom: solid 3px black; }
+    .mxtp-main .playlist-title {
+      color: #686868;
+      text-align: center;
+      position: relative;
+      font-size: 1.2em;
+      z-index: -1; }
+    .mxtp-main .playlist-set-title {
+      margin-top: -2em; }
+      .mxtp-main .playlist-set-title input {
+        width: 100%;
+        z-index: -2;
+        font-size: 1.2em;
+        border: 0;
+        background-color: transparent; }
+      .mxtp-main .playlist-set-title input:hover {
+        pointer: cursor;
+        border-bottom: solid 3px black; }
+      .mxtp-main .playlist-set-title input:focus {
+        border-bottom: solid 3px black;
+        outline: none;
+        background-color: white;
+        text-align: center; }
+    .mxtp-main .playlist_style-form {
+      text-align: center; }
+    .mxtp-main .mxtp-section {
+      text-align: center; }
+
+  .mxtp-form-btn {
+    border: solid 2px #ffa500;
+    color: #ffa500;
+    background-color: white;
+    width: 10em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 5px; }
+
+  .mxtp-form-btn:hover, .mxtp-form-btn:focus {
+    background-color: #ffa500;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s;
+    cursor: pointer; }
+
+  .mxtp-form-sml-btn {
+    border: solid 2px #3399FF;
+    color: #3399FF;
+    background-color: white;
+    width: 8em;
+    font-size: 0.6em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 5px; }
+
+  .mxtp-form-sml-btn:hover {
+    background-color: #3399FF;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s;
+    cursor: pointer; }
+
+  .mxtp-form-input {
+    width: 30em;
+    height: 2em;
+    border: none;
+    border-bottom: solid 2px #686868;
+    font-size: 1em;
+    color: #3399FF;
+    text-align: center; }
+
+  .mxtp-form-input:hover, .mxtp-form-input:focus {
+    outline: none;
+    border-bottom: solid 3px #3399FF;
+    transition: 0.5s;
+    pointer: cursor;
+    font-size: 2em;
+    font-weight: bold; }
+
+  .mxtp-form-input textarea {
+    height: 5em;
+    width: 30em;
+    font-size: 1em; }
+
+  .mxtp-buttons {
+    text-align: center; }
+    .mxtp-buttons .button_to {
+      display: inline-block;
+      margin-top: 2em;
+      margin-bottom: 2em; }
+      .mxtp-buttons .button_to input {
+        border: solid 2px #00CC99;
+        font-size: 1em;
+        background-color: white;
+        color: #00CC99;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        border-radius: 5px;
+        width: 10em; }
+      .mxtp-buttons .button_to input:hover {
+        transition: 0.2s;
+        background-color: #00CC99;
+        color: white;
+        font-weight: bold;
+        cursor: pointer; }
+      .mxtp-buttons .button_to .mxtp-form-red-btn {
+        border: solid 2px #FF6666;
+        color: #FF6666; }
+      .mxtp-buttons .button_to .mxtp-form-red-btn:hover {
+        background-color: #FF6666; }
+
+  .cassette-tape {
+    text-align: center;
+    position: relative;
+    z-index: -1; }
+    .cassette-tape img {
+      width: 450px; }
+
+  .mxtp-player {
+    margin-top: -13em;
+    text-align: center;
+    margin-bottom: 5em; }
+    .mxtp-player iframe {
+      z-index: -2; }
+
+  .song-listing {
+    padding-top: 0.2em; }
+
+  .song-details {
+    font-weight: bolder;
+    color: #3399FF;
+    border-bottom: solid 3px #3399FF;
+    margin-bottom: 1em; }
+
+  .mxtp-form-sml-btn-red {
+    border: solid 2px #FF6666;
+    color: #FF6666;
+    background-color: white;
+    width: 8em;
+    font-size: 0.6em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 5px; }
+
+  .mxtp-form-sml-btn-red:hover {
+    background-color: #FF6666;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s;
+    cursor: pointer; }
+
+  .mxtp-form-text {
+    margin: 0 auto; }
+    .mxtp-form-text textarea {
+      width: 20em;
+      font-size: 1em; }
+    .mxtp-form-text textarea:active, .mxtp-form-text textarea:focus {
+      width: 30em;
+      font: 1em;
+      transition: 0.5s;
+      outline: none; }
+
+  .about-section {
+    text-align: center; }
+    .about-section hr {
+      width: 10em;
+      margin-top: 1em;
+      margin-bottom: 2em; } }
+@media all and (min-width: 600px) {
+  .song-details {
+    width: 30em;
+    margin: 0 auto;
+    margin-bottom: 1em; }
+
+  .mxtp-main {
+    margin: 0 auto;
+    max-width: 70%; }
+
+  .engage-section .engage-title {
+    font-size: 4em; }
+
+  .mxtp-main .playlist-title {
+    font-size: 2em; }
+  .mxtp-main .playlist-set-title {
+    margin-top: -4em; }
+    .mxtp-main .playlist-set-title input {
+      font-size: 2em; } }
+
+/*# sourceMappingURL=playlist.css.map */

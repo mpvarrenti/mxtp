@@ -5,8 +5,8 @@
         <% if @playlist.title == nil %>
                 <div class="mxtp-section">
 			<%= form_tag("", method: "get", class: "playlist_title-form") do %>
-				<%= text_field(:playlist, :title, class: "playlist-set-title" ) %>
-				<%= submit_tag("Set Title", class: "mxtp-form-btn") %>
+				<%= text_field(:playlist, :title, class: "mxtp-form-input", placeholder: "click to change title" ) %>
+				<p><%= submit_tag("Set Title", class: "mxtp-form-btn") %></p>
 			<% end %>
                 </div>
         <% end %>
@@ -18,35 +18,35 @@
 			<%= color_field(:style, :bgcolor) %> 
 			<%= label_tag(:color, "Font Colour") %>
 			<%= color_field(:style, :color) %> 
-			<%= submit_tag("Update", class: "mxtp-form-btn") %>
+			<p><%= submit_tag("Update", class: "mxtp-form-btn") %></p>
 		<% end %>
         </div>
 
-        <h3 class="mxtp-section">Keep adding songs until you're done...</h3>
 
+    <h3 class="mxtp-labels">Songs</h3>
+        <h4 class="mxtp-section">Keep adding songs until you're done...</h4>
         <div class="mxtp-section">
 		<%= form_tag("", method: "get", style: "song_new-form") do %>
-			<%= label_tag(:song_title, "Song Title:") %>
-			<%= text_field(:new_song, :song_title, class: "mxtp-form-input") %>
-			<%= submit_tag("Add", class: "mxtp-form-btn") %>
+			<%#= label_tag(:song_title, "Song Title:") %>
+			<%= text_field(:new_song, :song_title, class: "mxtp-form-input", placeholder: "song title") %>
+			<p><%= submit_tag("Add", class: "mxtp-form-btn") %></p>
 		<% end %>
         </div>
 
         <div class="mxtp-section song-list">
 		<% for song in @songs %>
-			<hr>
 			<p>
 				<%= "#{song.song_title} by #{song.artist_name}" %>
 				<%= form_for :fix_artist, url:edit_playlist_song_path(song), method: :get do |fix_artist_form| %>
 					<%= hidden_field_tag(:song_id, song.id) %>
-					<%= fix_artist_form.submit "Fix Artist" %>	
+					<%= fix_artist_form.submit "Fix Artist", class: "mxtp-form-sml-btn" %>	
 				<% end %>
 			</p>
 		<% end %>
         </div>
 
         <div class="mxtp-section mxtp-buttons">
-		<%= button_to "Done!", playlist_path(@playlist), method: :get %>
-		<%= button_to "Delete Playlist", playlist_path(@playlist), method: :delete %>
+      		<%= button_to "Done!", playlist_path(@playlist), method: :get %>
+      		<%= button_to "Delete Playlist", playlist_path(@playlist), method: :delete, class: "mxtp-form-red-btn" %>
         </div>
 </div>

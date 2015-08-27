@@ -3,6 +3,8 @@ $dark-grey: #686868;
 $light-grey: #E0E0E0;
 $orange: #ffa500;
 $dark-blue: #3399FF;
+$red: #FF6666;
+$green: #00CC99;
 
 $solid-outline: solid 3px black;
 $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -27,7 +29,7 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     
     .landing-title a {
-      padding-left: 2em;
+      padding-left: 1.5em;
       text-decoration: none;
       color: $dark-grey;
     }
@@ -36,7 +38,7 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       float: right;
       margin-top: -3.1em;
       text-align: right;
-      margin-right: 2em;
+      margin-right: 3em;
 
       a {
         text-decoration: none;
@@ -102,6 +104,13 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   // EDIT PAGE ================================
 
+  .song-list {
+    font-size: 1.2em;
+    p {
+    margin-bottom: 0.1em;
+    }
+  }
+
 
   .mxtp-main {
     // background-color: $light-grey;
@@ -166,31 +175,70 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   // FORM - MIDDLE BUTTONS
   .mxtp-form-btn {
-    
-    input {
-      border: solid 2px $orange;
-      color: $orange;
-      background-color: white;
-      width: 10em;
-      margin-top: 1em;
-      margin-bottom: 1em;
-      font-size: 1em;
-      padding-top: 0.3em;
-      padding-bottom: 0.3em;
-      border-radius: 5px;
-    }
-    
-    input:hover, input:active {
-      background-color: $orange;
-      color: white;
-      font-weight: bolder;
-      transition: 0.2s;
-      // border: solid 3px $orange;
-      cursor: pointer;
-      // border: 5px;
-    }
+    border: solid 2px $orange;
+    color: $orange;
+    background-color: white;
+    width: 10em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 5px;
+  }
+
+  .mxtp-form-btn:hover, .mxtp-form-btn:focus {
+    background-color: $orange;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  .mxtp-form-sml-btn {
+    border: solid 2px $dark-blue;
+    color: $dark-blue;
+    background-color: white;
+    width: 8em;
+    font-size: 0.6em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 5px;
+    // margin-top: 0.1em;
 
   }
+
+  .mxtp-form-sml-btn:hover {
+    background-color: $dark-blue;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+
+
+
+  .mxtp-form-input {
+    width: 30em;
+    height: 2em;
+    border: none;
+    border-bottom: solid 2px $dark-grey;
+    // margin-bottom: 0.5em;
+    font-size: 1em;
+    color: $dark-blue;
+    text-align: center;
+  }
+
+  .mxtp-form-input:hover, .mxtp-form-input:focus, {
+      outline: none;
+      border-bottom: solid 3px $dark-blue;
+      transition: 0.5s;
+      pointer: cursor;
+      font-size: 2em;
+      font-weight: bold;
+  }
+
 
   .mxtp-form-input {
     textarea {
@@ -198,41 +246,26 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       width: 30em;
       font-size: 1em;
     }
-    input {
-      width: 30em;
-      height: 2em;
-      border: none;
-      border-bottom: solid 2px $dark-grey;
-      margin-bottom: 1em;
-      font-size: 1em;
-      color: $dark-blue;
-    }
-
-    input:focus, input:hover {
-      outline: none;
-      border-bottom: solid 3px $dark-blue;
-      transition: 0.5s;
-      pointer: cursor;
-    }
   }
 
 
 // FOOTER BUTTONS
   .mxtp-buttons {
     text-align: center;
+
     // border-top: solid 1px $light-grey;
 
 
     .button_to {
       display: inline-block;
-      margin-top: 1em;
+      margin-top: 2em;
       margin-bottom: 2em;
 
         input {
-          border: solid 2px $dark-blue;
+          border: solid 2px $green;
           font-size: 1em;
           background-color: white;
-          color: $dark-blue;
+          color: $green;
           padding-top: 0.3em;
           padding-bottom: 0.3em;
           border-radius: 5px;
@@ -241,12 +274,21 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
         input:hover {
           transition: 0.2s;
-          background-color: $dark-blue;
+          background-color: $green;
           color: white;
           font-weight: bold;
           // border: solid 3px $dark-blue;
           cursor: pointer;
         }
+
+    .mxtp-form-red-btn {
+      border: solid 2px $red;
+      color: $red;
+    }
+
+    .mxtp-form-red-btn:hover {
+      background-color: $red;
+    }
     }
   }
 
@@ -276,12 +318,62 @@ $main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     padding-top: 0.2em;
     // background-color: red;
   }
-    .song-details {
-      font-weight: bolder;
-      color: $dark-blue;
-      border-bottom: solid 3px $dark-blue;
-      margin-bottom: 1em;
+  .song-details {
+    font-weight: bolder;
+    color: $dark-blue;
+    border-bottom: solid 3px $dark-blue;
+    margin-bottom: 1em;
+  }
+
+  .mxtp-form-sml-btn-red {
+    border: solid 2px $red;
+    color: $red;
+    background-color: white;
+    width: 8em;
+    font-size: 0.6em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 5px;
+    // margin-top: 0.1em;
+
+  }
+
+  .mxtp-form-sml-btn-red:hover {
+    background-color: $red;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  .mxtp-form-text {
+    margin: 0 auto;
+    
+    textarea {
+    width: 20em;
+    font-size: 1em;
+    // text-align: center;
     }
+    textarea:active, textarea:focus {
+    width: 30em;
+    font: 1em;
+    transition: 0.5s;
+    outline: none;
+    // text-align: center;
+    }
+  
+  }
+
+// ABOUT PAGE================================
+  .about-section {
+    hr {
+      width: 10em;
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+    // margin: 1em;
+    text-align: center;
+  }
 
 }
 

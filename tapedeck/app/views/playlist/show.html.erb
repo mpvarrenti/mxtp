@@ -19,13 +19,12 @@
                                 <% else %>
                                   <%= form_for(song) do %>
                                     <%#= label_tag "Add Note:" %>
-                                    <div class="mxtp-form-input"><%= text_area_tag :notes, "#{song.notes}" %></div>
-                                    <div class="mxtp-form-btn"><%= submit_tag("Add Note") %></div>
+                                    <div class="mxtp-form-text"><%= text_area_tag :notes, "#{song.notes}" %></div>
+                                    <%= submit_tag "Add Note", class: "mxtp-form-btn" %>
                                   <% end %>
                                 <% end %>
                             <!-- <div class="mxtp-buttons"> -->
-                                    <div class="mxtp-form-btn"><%= button_to "Delete Song", playlist_song_path(song), method: :delete %>
-                                    </div>
+                                    <%= button_to "Delete Song", playlist_song_path(song), method: :delete, class: "mxtp-form-sml-btn-red" %>
                             <!-- </div> -->
                                 </div>
                         </div>
@@ -35,7 +34,7 @@
 
         <div class="mxtp-section mxtp-buttons">
 		<%= button_to "Edit Playlist", edit_playlist_path(@playlist), method: :get %>
-		<%= button_to "Home", root_path, method: :get %>
+		<%= button_to "Home", root_path, method: :get, class: "mxtp-form-red-btn" %>
         </div>
 
         <!-- 
